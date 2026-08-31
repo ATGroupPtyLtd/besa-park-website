@@ -71,8 +71,11 @@ export function WarehousePlanGallery() {
 
         <div className={styles.content}>
           <div className={styles.viewerHeading} aria-live="polite">
-            <div><small>{String(selectedIndex + 1).padStart(2, "0")} / 05</small><h3>{selected.title}</h3></div>
-            <p>{selected.description}</p>
+            <div>
+              <small>{String(selectedIndex + 1).padStart(2, "0")} / 05</small>
+              <h3>{selected.title}</h3>
+              <p>{selected.description}</p>
+            </div>
           </div>
 
           <button
