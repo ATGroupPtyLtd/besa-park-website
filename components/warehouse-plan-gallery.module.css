@@ -207,10 +207,10 @@
 }
 
 .lightbox {
-  width: 96vw !important;
+  width: 90% !important;
   max-width: 1500px !important;
-  height: 94vh;
-  max-height: 94vh;
+  height: 90%;
+  max-height: 90%;
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 14px !important;
   overflow: hidden;
@@ -320,9 +320,9 @@
   }
 
   .lightbox {
-    width: calc(100vw - 12px) !important;
-    height: 96vh;
-    max-height: 96vh;
+    width: 84% !important;
+    height: 84%;
+    max-height: 84%;
     padding: 12px !important;
   }
 
