@@ -6,7 +6,7 @@ import { FinalCta } from "@/components/final-cta";
 import { InnerHero } from "@/components/inner-hero";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import styles from "./warehouses.module.css";
+import { WarehousePlanGallery } from "@/components/warehouse-plan-gallery";
 
 export const metadata: Metadata = { title: "Warehouses", description: "Explore five Stage One warehouse opportunities at BESA Park in Traralgon East." };
 
@@ -66,13 +66,7 @@ export default function WarehousesPage() {
               </article>
             ))}
           </div>
-          <div className={styles.planGallery} aria-label="Stage One plans and elevations">
-            <img src="/besa-assets/stage-one-unit-comparison.png" alt="Comparison of the five Stage One units showing ground, mezzanine and total floor areas" />
-            <img src="/besa-assets/stage-one-ground-floor-plan.png" alt="Stage One ground-floor plan showing five warehouses with office and amenity areas" />
-            <img src="/besa-assets/stage-one-mezzanine-plan.png" alt="Stage One mezzanine plan showing upper-level office areas" />
-            <img src="/besa-assets/stage-one-front-elevation.png" alt="Stage One front elevation with glazed entries and roller doors" />
-            <img src="/besa-assets/stage-one-site-plan.png" alt="Simplified Stage One site plan showing five units, access and shared parking" />
-          </div>
+          <WarehousePlanGallery />
           <p className="fine-print">Areas are taken from the architectural town-planning set dated 17 June 2026. Layouts remain indicative and subject to final design, approvals and documentation.</p>
         </section>
 
