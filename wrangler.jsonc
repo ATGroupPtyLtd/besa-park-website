@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "besa-park",
+  "compatibility_date": "2026-08-31",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./out"
+  }
+}
