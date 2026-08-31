@@ -118,15 +118,13 @@ export function WarehousePlanGallery() {
           </div>
           <div className={styles.lightboxFooter}>
             <span>{selectedIndex + 1} of {plans.length}</span>
-
             <a
               className={styles.fullResolutionLink}
               href={selected.src}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Open full-resolution drawing
-              <Expand aria-hidden="true" />
+              Open full-resolution drawing <Expand aria-hidden="true" />
             </a>
           </div>
         </DialogContent>
