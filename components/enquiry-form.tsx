@@ -35,8 +35,8 @@ export function EnquiryForm() {
         I&apos;m interested in
         <NativeSelect required name="interest" defaultValue="" className="form-select">
           <NativeSelectOption value="" disabled>Select an opportunity</NativeSelectOption>
-          <NativeSelectOption value="buy">Buying a warehouse</NativeSelectOption>
-          <NativeSelectOption value="lease">Leasing a warehouse</NativeSelectOption>
+          <NativeSelectOption value="buy">Buying a business space</NativeSelectOption>
+          <NativeSelectOption value="lease">Leasing a business space</NativeSelectOption>
           <NativeSelectOption value="operate">Operating a business at BESA Park</NativeSelectOption>
           <NativeSelectOption value="hospitality">Hospitality or lifestyle opportunity</NativeSelectOption>
           <NativeSelectOption value="invest">Investment opportunity</NativeSelectOption>

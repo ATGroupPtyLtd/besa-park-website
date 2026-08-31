@@ -8,11 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const links = [
-  ["/", "Home"],
-  ["/warehouses", "Warehouses"],
-  ["/precinct", "The Precinct"],
-  ["/location", "Location"],
-  ["/vision", "Future Vision"],
+  ["/", "The Precinct"],
+  ["/opportunities", "Opportunities"],
   ["/enquire", "Enquire"],
 ];
 

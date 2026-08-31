@@ -1,42 +1,28 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Building2,
-  Dumbbell,
-  MapPin,
-  Sparkles,
-  Users,
-  Warehouse,
-} from "lucide-react";
+import { ArrowRight, Building2, Dumbbell, Sparkles } from "lucide-react";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const pillars = [
   {
-    icon: Warehouse,
+    icon: Building2,
     number: "01",
     title: "Work",
-    copy: "Premium warehouse opportunities shaped for businesses ready to move, grow and be seen.",
+    copy: "Architecturally designed business spaces within a precinct built to be seen and visited.",
   },
   {
     icon: Dumbbell,
     number: "02",
     title: "Play",
-    copy: "AREA 365 is active now, with RPM Entertainment planned as the precinct's next major drawcard.",
+    copy: "AREA 365 is already active, bringing consistent energy and daily visitation to the site.",
   },
   {
-    icon: Users,
+    icon: Sparkles,
     number: "03",
     title: "Connect",
-    copy: "A future mix of business, hospitality and visitor activity designed to keep the precinct moving.",
+    copy: "Entertainment, hospitality and complementary operators will shape a genuine destination.",
   },
-];
-
-const stages = [
-  { stage: "Stage 01", title: "5 premium warehouse units", note: "Now selling / leasing" },
-  { stage: "Stage 02", title: "RPM Entertainment Complex", note: "Future destination" },
-  { stage: "Stage 03", title: "10 additional industrial units", note: "Future expansion" },
 ];
 
 export default function Home() {
@@ -46,50 +32,38 @@ export default function Home() {
       <main>
         <section className="hero-shell">
           <div className="hero-copy">
-            <p className="eyebrow eyebrow-light">Traralgon, Victoria · Emerging precinct</p>
-            <h1>
-              Work.<br />
-              Play.<br />
-              <span>Connect.</span>
-            </h1>
+            <p className="eyebrow eyebrow-light">Traralgon, Victoria · A connected destination</p>
+            <h1>A place to<br />work. play.<br /><span>connect.</span></h1>
             <p className="hero-lead">
-              Premium industrial space beside fitness, entertainment and future hospitality — built to become a destination, not another industrial estate.
+              BESA Park brings distinctive business spaces together with fitness, entertainment and future hospitality in one evolving precinct.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/warehouses">
-                Explore warehouses <ArrowRight aria-hidden="true" />
+              <Link className="button button-primary" href="/opportunities">
+                View opportunities <ArrowRight aria-hidden="true" />
               </Link>
-              <Link className="button button-ghost-light" href="/enquire">
-                Register interest
-              </Link>
+              <Link className="button button-ghost-light" href="/enquire">Register interest</Link>
             </div>
-            <div className="hero-facts" aria-label="BESA Park highlights">
-              <div><strong>5</strong><span>Stage One units</span></div>
-              <div><strong>298.72–548.72m²</strong><span>Total floor areas</span></div>
-              <div><strong>3 stages</strong><span>One bigger vision</span></div>
+            <div className="hero-facts" aria-label="BESA Park availability">
+              <div><strong>3</strong><span>opportunities remain</span></div>
+              <div><strong>2</strong><span>already secured</span></div>
+              <div><strong>1</strong><span>finite first release</span></div>
             </div>
           </div>
           <div className="hero-visual" aria-label="Architectural vision for BESA Park">
-            <img className="reference-crop crop-home-hero" src="/besa-assets/warehouse-row.png" alt="Architectural concept showing the Stage One warehouse row at BESA Park" />
+            <img className="reference-crop crop-home-hero" src="/besa-assets/warehouse-row.png" alt="Architectural concept showing the Stage One business spaces at BESA Park" />
             <div className="hero-visual-shade" />
-            <div className="hero-status">
-              <span className="status-dot" />
-              Stage One opportunities open
-            </div>
+            <div className="hero-status"><span className="status-dot" />Only three remain</div>
             <div className="hero-mark" aria-hidden="true">B</div>
           </div>
         </section>
 
         <section className="intro section-pad" id="precinct">
-          <div className="section-kicker">The BESA Park difference</div>
+          <div className="section-kicker">The BESA Park idea</div>
           <div className="intro-grid">
-            <h2>More than an industrial park.<br /><span>A destination.</span></h2>
-            <div>
-              <p className="large-copy">
-                Traditional industrial developments give businesses a building. BESA Park is designed to give them an address people already have a reason to visit.
-              </p>
-              <Link className="text-link" href="/precinct">Explore the precinct <ArrowRight aria-hidden="true" /></Link>
-            </div>
+            <h2>One address.<br /><span>More reasons to be there.</span></h2>
+            <p className="large-copy">
+              This is not a row of isolated buildings. It is a considered precinct where business, movement and experience strengthen one another.
+            </p>
           </div>
           <div className="pillar-grid">
             {pillars.map(({ icon: Icon, number, title, copy }) => (
@@ -104,81 +78,54 @@ export default function Home() {
 
         <section className="warehouse-feature section-pad">
           <div className="warehouse-copy">
-            <p className="eyebrow">Stage One · Register your interest</p>
-            <h2>Five premium warehouses.<br /><span>One strategic position.</span></h2>
+            <p className="eyebrow">Limited Stage One release</p>
+            <h2>Five released.<br /><span>Only three remain.</span></h2>
             <p>
-              Five planned units from 298.72m² to 548.72m² total floor area, each combining ground-floor workspace with an upper-level mezzanine office.
+              Two opportunities have already been secured. The remaining spaces offer an early position in a destination precinct that is only beginning its story.
             </p>
             <div className="metric-row">
-              <div><strong>5</strong><span>units</span></div>
-              <div><strong>298.72–548.72</strong><span>total square metres</span></div>
-              <div><strong>Office</strong><span>+ mezzanine</span></div>
+              <div><strong>3</strong><span>remaining</span></div>
+              <div><strong>2</strong><span>secured</span></div>
+              <div><strong>Now</strong><span>registering interest</span></div>
             </div>
-            <Link className="button button-dark" href="/warehouses">View Stage One <ArrowRight aria-hidden="true" /></Link>
+            <Link className="button button-dark" href="/opportunities">Explore the release <ArrowRight aria-hidden="true" /></Link>
           </div>
           <div className="warehouse-visual">
-            <img className="reference-crop crop-warehouse-hero" src="/besa-assets/warehouse-detail.png" alt="Detailed concept view of BESA Park warehouse units" />
-            <div className="unit-tag">Flexible industrial space</div>
+            <img className="reference-crop crop-warehouse-hero" src="/besa-assets/warehouse-detail.png" alt="Detailed concept view of the Stage One BESA Park spaces" />
+            <div className="unit-tag">Stage One · Three opportunities remain</div>
           </div>
         </section>
 
-        <section className="pulse-section section-pad">
+        <section className="pulse-section section-pad" id="vision">
           <div className="pulse-heading">
-            <div><p className="eyebrow eyebrow-light">Built around activity</p><h2>The precinct has a pulse.</h2></div>
-            <p>Business does not have to stop when the workday ends.</p>
+            <div><p className="eyebrow eyebrow-light">Built around activity</p><h2>More reasons to return.</h2></div>
+            <p>A connected mix creates movement, visibility and lasting identity.</p>
           </div>
           <div className="pulse-grid">
             <article className="pulse-card pulse-live">
               <div className="pulse-icon"><Dumbbell aria-hidden="true" /></div>
-              <div><span>Open now</span><h3>AREA 365</h3><p>Premium fitness generating daily visitation and an active base for the precinct.</p></div>
+              <div><span>Open now</span><h3>AREA 365</h3><p>Premium fitness generating daily energy and repeat visitation.</p></div>
             </article>
             <article className="pulse-card">
               <div className="pulse-icon"><Sparkles aria-hidden="true" /></div>
-              <div><span>Stage Two</span><h3>RPM Entertainment</h3><p>Future go-karts, arcade entertainment, group experiences, events and functions.</p></div>
+              <div><span>Planned</span><h3>RPM Entertainment</h3><p>A future regional drawcard for groups, events and shared experiences.</p></div>
             </article>
             <article className="pulse-card">
               <div className="pulse-icon"><Building2 aria-hidden="true" /></div>
-              <div><span>Future opportunity</span><h3>Hospitality & lifestyle</h3><p>Potential for food, beverage, services and complementary operators.</p></div>
+              <div><span>Future mix</span><h3>Complementary operators</h3><p>Hospitality, services and businesses that add to the destination.</p></div>
             </article>
           </div>
         </section>
 
-        <section className="roadmap section-pad">
-          <div className="roadmap-head">
-            <div><p className="eyebrow">The development roadmap</p><h2>A precinct designed to evolve.</h2></div>
-            <p>BESA Park begins with serious commercial opportunity and grows through entertainment, activity and further industrial development.</p>
-          </div>
-          <div className="stage-line">
-            {stages.map((item, index) => (
-              <article className="stage-item" key={item.stage}>
-                <div className="stage-node"><span>{String(index + 1).padStart(2, "0")}</span></div>
-                <p>{item.stage}</p>
-                <h3>{item.title}</h3>
-                <span>{item.note}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="location-tease section-pad">
+        <section className="final-cta" id="location">
           <div>
-            <p className="eyebrow eyebrow-light">Positioned for growth</p>
-            <h2>Traralgon.<br />Connected to opportunity.</h2>
-            <p>A high-exposure regional position designed for accessibility, activity and long-term commercial appeal.</p>
-            <Link className="button button-primary" href="/location"><MapPin aria-hidden="true" /> Explore location</Link>
-          </div>
-          <div className="location-orbit" aria-hidden="true"><span>BESA</span><i /><b>TRARALGON</b></div>
-        </section>
-
-        <section className="final-cta">
-          <div>
-            <p className="eyebrow eyebrow-light">Stage One opportunities are open</p>
-            <h2>Establish your business early.</h2>
-            <p>Join BESA Park from the beginning and become part of a precinct with a much bigger story.</p>
+            <p className="eyebrow eyebrow-light">Stirloch Circuit · Traralgon</p>
+            <h2>Three remain. Start the conversation.</h2>
+            <p>Availability is limited and this first release will not be repeated. Register now to discuss the opportunity that best fits your plans.</p>
           </div>
           <div className="final-actions">
             <Link className="button button-primary" href="/enquire">Register interest <ArrowRight aria-hidden="true" /></Link>
-            <Link className="button button-ghost-light" href="/vision">See the future vision</Link>
+            <Link className="button button-ghost-light" href="/opportunities">View opportunities</Link>
           </div>
         </section>
       </main>

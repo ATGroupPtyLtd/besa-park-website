@@ -881,7 +881,7 @@ select {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  grid-template-columns: 1.5fr .8fr 1.2fr;
   gap: 50px;
   padding: 70px clamp(24px, 7vw, 112px);
 }
@@ -1174,6 +1174,10 @@ select {
   grid-template-columns: repeat(5, 1fr);
   margin-top: 58px;
   border: 1px solid var(--line);
+}
+
+.opportunity-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .unit-card {
@@ -2104,11 +2108,11 @@ select {
   }
 
   .footer-main {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.3fr .8fr 1.1fr;
   }
 
   .footer-location {
-    grid-column: 2 / 4;
+    grid-column: auto;
   }
 
   .inner-hero {
@@ -2315,16 +2319,16 @@ select {
   }
 
   .footer-main {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 55px 22px;
   }
 
   .footer-brand {
-    grid-column: 1 / 3;
+    grid-column: auto;
   }
 
   .footer-location {
-    grid-column: 1 / 3;
+    grid-column: auto;
   }
 
   .footer-bottom {
