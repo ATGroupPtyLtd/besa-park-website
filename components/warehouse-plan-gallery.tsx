@@ -14,12 +14,6 @@ import styles from "./warehouse-plan-gallery.module.css";
 
 const plans = [
   {
-    title: "Unit comparison",
-    description: "Ground-floor, mezzanine and total floor areas for all five units.",
-    src: "/besa-assets/stage-one-unit-comparison.png",
-    alt: "Comparison of the five Stage One units showing ground, mezzanine and total floor areas",
-  },
-  {
     title: "Ground-floor plan",
     description: "Five warehouse units with office and amenity areas.",
     src: "/besa-assets/stage-one-ground-floor-plan.png",
@@ -37,18 +31,13 @@ const plans = [
     src: "/besa-assets/stage-one-front-elevation.png",
     alt: "Stage One front elevation with glazed entries and roller doors",
   },
-  {
-    title: "Stage One site plan",
-    description: "Simplified site arrangement showing access and shared parking.",
-    src: "/besa-assets/stage-one-site-plan.png",
-    alt: "Simplified Stage One site plan showing five units, access and shared parking",
-  },
 ] as const;
 
 export function WarehousePlanGallery() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const selected = plans[selectedIndex];
+  const drawingCount = String(plans.length).padStart(2, "0");
 
   const selectPrevious = () => {
     setSelectedIndex((current) => (current - 1 + plans.length) % plans.length);
@@ -66,16 +55,14 @@ export function WarehousePlanGallery() {
             <span className={styles.icon}><Images aria-hidden="true" /></span>
             <span><small>Stage One documentation</small><strong>View plans &amp; elevations</strong></span>
           </span>
-          <span className={styles.summaryMeta}>5 drawings <ChevronDown className={styles.summaryChevron} aria-hidden="true" /></span>
+          <span className={styles.summaryMeta}>{plans.length} drawings <ChevronDown className={styles.summaryChevron} aria-hidden="true" /></span>
         </summary>
 
         <div className={styles.content}>
           <div className={styles.viewerHeading} aria-live="polite">
-            <div>
-              <small>{String(selectedIndex + 1).padStart(2, "0")} / 05</small>
-              <h3>{selected.title}</h3>
-              <p>{selected.description}</p>
-            </div>
+            <small>{String(selectedIndex + 1).padStart(2, "0")} / {drawingCount}</small>
+            <h3>{selected.title}</h3>
+            <p>{selected.description}</p>
           </div>
 
           <button

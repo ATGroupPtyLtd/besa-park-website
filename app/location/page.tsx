@@ -24,7 +24,7 @@ export default function LocationPage() {
           eyebrow="16 Stirloch Circuit · Traralgon East"
           title={<>Positioned<br /><span>for growth.</span></>}
           copy="A regional commercial position with direct vehicle access from Stirloch Circuit and shared access and parking planned around Stage One."
-          image="/besa-assets/stage-one-site-plan.png"
+          image="/besa-assets/masterplan-aerial.png"
           imageAlt="Simplified Stage One site plan for BESA Park on Stirloch Circuit"
           label="Simplified marketing plan · Not to scale"
           isPlan

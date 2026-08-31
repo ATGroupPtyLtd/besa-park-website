@@ -2,7 +2,7 @@
   margin-top: 28px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #f7f9fc;
+  background: var(--warm-surface);
 }
 
 .summary {
@@ -23,7 +23,7 @@
 }
 
 .summary:hover {
-  background: #f4f8fd;
+  background: var(--brand-soft);
 }
 
 .summaryLead,
@@ -43,7 +43,7 @@
 }
 
 .summaryLead small {
-  color: var(--blue);
+  color: var(--brand);
   font-size: 10px;
   font-weight: 900;
   letter-spacing: .14em;
@@ -62,7 +62,7 @@
   height: 46px;
   place-items: center;
   color: #fff;
-  background: var(--blue);
+  background: var(--brand);
 }
 
 .icon svg {
@@ -93,26 +93,30 @@
 }
 
 .viewerHeading {
-  margin-bottom: 20px;
+  display: flex;
+  max-width: 760px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 18px;
 }
 
 .viewerHeading small {
-  color: var(--blue);
+  color: var(--brand);
   font-size: 10px;
   font-weight: 900;
   letter-spacing: .14em;
 }
 
 .viewerHeading h3 {
-  margin: 6px 0 0;
+  margin: 2px 0 0;
   color: var(--ink);
   font-size: clamp(24px, 2.4vw, 36px);
   letter-spacing: -.045em;
 }
 
 .viewerHeading p {
-  max-width: 620px;
-  margin: 8px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.6;
@@ -120,6 +124,7 @@
 
 .featured {
   position: relative;
+  display: block;
   width: 100%;
   min-height: 0;
   aspect-ratio: 2048 / 1260;
@@ -130,16 +135,14 @@
   background: #fff;
 }
 
-.featured img {
+.featured img,
+.lightboxImage img {
   position: absolute;
   inset: 0;
   display: block;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain !important;
-  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .featured>span {
@@ -164,13 +167,9 @@
 
 .thumbnailStrip {
   display: grid;
-  grid-auto-columns: minmax(150px, 1fr);
-  grid-auto-flow: column;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-top: 12px;
-  padding-bottom: 5px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
 }
 
 .thumbnail {
@@ -180,7 +179,6 @@
   min-width: 0;
   padding: 7px;
   cursor: pointer;
-  scroll-snap-align: start;
   color: var(--muted);
   border: 1px solid var(--line);
   background: #fff;
@@ -191,8 +189,8 @@
 .thumbnail:hover,
 .thumbnail[data-active="true"] {
   color: var(--ink);
-  border-color: var(--blue);
-  box-shadow: inset 0 -3px 0 var(--blue);
+  border-color: var(--brand);
+  box-shadow: inset 0 -3px 0 var(--brand);
 }
 
 .thumbnail img {
@@ -209,17 +207,16 @@
 }
 
 .lightbox {
-  display: grid !important;
-  grid-template-rows: auto minmax(0, 1fr) auto;
   width: 96vw !important;
   max-width: 1500px !important;
-  height: min(94dvh, 1000px);
-  max-height: 94dvh;
+  height: 94vh;
+  max-height: 94vh;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 14px !important;
-  overflow: auto;
+  overflow: hidden;
   padding: 18px !important;
   border-radius: 0 !important;
-  background: #f7f9fc !important;
+  background: var(--warm-surface) !important;
 }
 
 .lightboxHeader {
@@ -235,28 +232,16 @@
 .lightboxImage {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-width: 0;
   min-height: 0;
+  height: 100%;
   overflow: hidden;
   border: 1px solid var(--line);
   background: #fff;
 }
 
-.lightboxImage img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain !important;
-  object-position: center;
-}
-
 .lightboxNav {
   position: absolute;
+  z-index: 1;
   top: 50%;
   display: grid;
   width: 44px;
@@ -270,7 +255,7 @@
 }
 
 .lightboxNav:hover {
-  background: var(--blue);
+  background: var(--brand);
 }
 
 .lightboxNav svg {
@@ -287,32 +272,10 @@
 
 .lightboxFooter {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px 20px;
+  gap: 20px;
   color: var(--muted);
   font-size: 11px;
-}
-
-.fullResolutionLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--blue);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
-.fullResolutionLink:hover {
-  text-decoration: underline;
-}
-
-.fullResolutionLink svg {
-  width: 15px;
-  height: 15px;
 }
 
 @media (max-width: 760px) {
@@ -344,18 +307,23 @@
   }
 
   .thumbnailStrip {
+    grid-template-columns: none;
     grid-auto-columns: 145px;
+    grid-auto-flow: column;
+    padding-bottom: 5px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .thumbnail {
+    scroll-snap-align: start;
   }
 
   .lightbox {
     width: calc(100vw - 12px) !important;
-    height: 96dvh;
-    max-height: 96dvh;
+    height: 96vh;
+    max-height: 96vh;
     padding: 12px !important;
-  }
-
-  .lightboxImage {
-    height: 100%;
   }
 
   .lightboxNav {
@@ -370,4 +338,28 @@
   .next {
     right: 6px;
   }
+
+  .lightboxFooter span:last-child {
+    display: none;
+  }
+}
+
+.fullResolutionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fullResolutionLink:hover {
+  text-decoration: underline;
+}
+
+.fullResolutionLink svg {
+  width: 15px;
+  height: 15px;
 }
