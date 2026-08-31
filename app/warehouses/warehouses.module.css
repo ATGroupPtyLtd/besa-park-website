@@ -1,0 +1,35 @@
+.planGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.planGallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.planGallery img:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 2 / 1;
+}
+
+@media (max-width: 760px) {
+  .planGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .planGallery img,
+  .planGallery img:first-child {
+    grid-column: auto;
+    min-height: 210px;
+    aspect-ratio: auto;
+  }
+}

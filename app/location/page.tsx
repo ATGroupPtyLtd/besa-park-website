@@ -21,12 +21,12 @@ export default function LocationPage() {
       <SiteHeader />
       <main>
         <InnerHero
-          eyebrow="Traralgon · Victoria"
+          eyebrow="16 Stirloch Circuit · Traralgon East"
           title={<>Positioned<br /><span>for growth.</span></>}
-          copy="A regional commercial position with the scale, accessibility and future activity to become a recognised destination."
-          image="/besa-assets/site-plan.png"
-          imageAlt="Indicative location context for BESA Park in Traralgon"
-          label="Indicative location context"
+          copy="A regional commercial position with direct vehicle access from Stirloch Circuit and shared access and parking planned around Stage One."
+          image="/besa-assets/stage-one-site-plan.png"
+          imageAlt="Simplified Stage One site plan for BESA Park on Stirloch Circuit"
+          label="Simplified marketing plan · Not to scale"
           isPlan
         >
           <Link className="button button-primary" href="#advantage">See the advantage <ArrowRight aria-hidden="true" /></Link>

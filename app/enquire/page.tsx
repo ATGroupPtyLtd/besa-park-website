@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Enquire", description: "Register you
 
 const faqs = [
   ["Can I buy or lease a warehouse?", "Stage One is being presented for sale or lease. Register your preference and requirements so the right pathway can be discussed."],
-  ["What sizes are planned?", "The current concept shows five units ranging from approximately 350m² to 500m². Areas are indicative and subject to final design and approvals."],
+  ["What sizes are planned?", "The current plans show five units ranging from 298.72m² to 548.72m² in total floor area, including mezzanine space. Ground-floor areas range from 250m² to 500m²."],
   ["Is BESA Park already open?", "AREA 365 is already operating at the precinct. The warehouses, RPM Entertainment and further stages are part of the development vision."],
   ["Can I enquire about hospitality or another business idea?", "Yes. BESA Park is interested in complementary operators who could strengthen the wider work, play and connect vision."],
   ["What happens after I register?", "The project team can share the relevant information and discuss your intended use, timing and preferred opportunity."],

@@ -65,7 +65,7 @@ export default function Home() {
             </div>
             <div className="hero-facts" aria-label="BESA Park highlights">
               <div><strong>5</strong><span>Stage One units</span></div>
-              <div><strong>250–500m²</strong><span>Approximate sizes</span></div>
+              <div><strong>298.72–548.72m²</strong><span>Total floor areas</span></div>
               <div><strong>3 stages</strong><span>One bigger vision</span></div>
             </div>
           </div>
@@ -104,15 +104,15 @@ export default function Home() {
 
         <section className="warehouse-feature section-pad">
           <div className="warehouse-copy">
-            <p className="eyebrow">Stage One · Now selling / leasing</p>
+            <p className="eyebrow">Stage One · Register your interest</p>
             <h2>Five premium warehouses.<br /><span>One strategic position.</span></h2>
             <p>
-              Flexible 250–500m² spaces for trade, warehousing, showrooms, distribution, owner-occupiers and investors — positioned beside an evolving destination precinct.
+              Five planned units from 298.72m² to 548.72m² total floor area, each combining ground-floor workspace with an upper-level mezzanine office.
             </p>
             <div className="metric-row">
               <div><strong>5</strong><span>units</span></div>
-              <div><strong>250–500</strong><span>square metres</span></div>
-              <div><strong>Sale</strong><span>or lease</span></div>
+              <div><strong>298.72–548.72</strong><span>total square metres</span></div>
+              <div><strong>Office</strong><span>+ mezzanine</span></div>
             </div>
             <Link className="button button-dark" href="/warehouses">View Stage One <ArrowRight aria-hidden="true" /></Link>
           </div>

@@ -16,7 +16,6 @@ export function EnquiryForm() {
         <CheckCircle2 aria-hidden="true" />
         <p className="eyebrow">Interest registered</p>
         <h2>Thanks — you&apos;re on the list.</h2>
-        <p>This demonstration is ready for a real inbox or CRM to be connected before public launch.</p>
         <button className="button button-dark" onClick={() => setSent(false)}>Send another enquiry</button>
       </div>
     );
@@ -46,7 +45,6 @@ export function EnquiryForm() {
       </label>
       <label>Tell us what you have in mind<Textarea required name="message" placeholder="The space, timing or opportunity you're looking for…" /></label>
       <div className="form-bottom">
-        <p><strong>Prototype form:</strong> connect your preferred inbox or CRM before the public launch.</p>
         <button className="button button-primary" type="submit">Register interest <ArrowRight aria-hidden="true" /></button>
       </div>
     </form>
