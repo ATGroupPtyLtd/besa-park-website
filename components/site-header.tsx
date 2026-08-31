@@ -18,6 +18,8 @@ const links = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const normalizedPathname =
+    pathname !== "/" ? pathname.replace(/\/$/, "") : pathname;
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="BESA Park home">
@@ -25,7 +27,7 @@ export function SiteHeader() {
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {links.map(([href, label]) => (
-          <Link className={pathname === href ? "active" : ""} href={href} key={href}>{label}</Link>
+          <Link className={normalizedPathname === href ? "active" : ""} href={href} key={href}>{label}</Link>
         ))}
       </nav>
       <Button className="header-cta" asChild>
@@ -39,7 +41,7 @@ export function SiteHeader() {
           <SheetHeader><SheetTitle className="mobile-wordmark">BESA PARK</SheetTitle></SheetHeader>
           <nav className="mobile-nav" aria-label="Mobile navigation">
             {links.map(([href, label]) => (
-              <SheetClose asChild key={href}><Link className={pathname === href ? "active" : ""} href={href}>{label}<ArrowUpRight /></Link></SheetClose>
+              <SheetClose asChild key={href}><Link className={normalizedPathname === href ? "active" : ""} href={href}>{label}<ArrowUpRight /></Link></SheetClose>
             ))}
           </nav>
           <SheetClose asChild><Link className="button button-primary mobile-enquire" href="/enquire">Register interest</Link></SheetClose>
