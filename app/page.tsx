@@ -50,10 +50,9 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual" aria-label="Architectural vision for BESA Park">
-            <img className="reference-crop crop-home-hero" src="/besa-assets/warehouse-row.png" alt="Architectural concept showing the Stage One business spaces at BESA Park" />
+            <img className="reference-crop crop-home-hero" src="/besa-assets/aerial-nightscape.png" alt="Architectural concept showing an aerial view of the proposed BESA Park" />
             <div className="hero-visual-shade" />
             <div className="hero-status"><span className="status-dot" />Only three remain</div>
-            <div className="hero-mark" aria-hidden="true">B</div>
           </div>
         </section>
 
