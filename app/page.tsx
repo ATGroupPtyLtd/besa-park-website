@@ -32,7 +32,7 @@ export default function Home() {
       <main>
         <section className="hero-shell">
           <div className="hero-copy">
-            <p className="eyebrow eyebrow-light">Traralgon, Victoria · A connected destination</p>
+            <p className="eyebrow eyebrow-light">Traralgon East, Victoria · A connected destination</p>
             <h1>A place to<br />work. play.<br /><span>connect.</span></h1>
             <p className="hero-lead">
               BESA Park brings distinctive business spaces together with fitness, entertainment and future hospitality in one evolving precinct.
@@ -118,7 +118,7 @@ export default function Home() {
 
         <section className="final-cta" id="location">
           <div>
-            <p className="eyebrow eyebrow-light">Stirloch Circuit · Traralgon</p>
+            <p className="eyebrow eyebrow-light">16 Stirloch Circuit · Traralgon East</p>
             <h2>Three remain. Start the conversation.</h2>
             <p>Availability is limited and this first release will not be repeated. Register now to discuss the opportunity that best fits your plans.</p>
           </div>

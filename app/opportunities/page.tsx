@@ -10,7 +10,7 @@ import { WarehousePlanGallery } from "@/components/warehouse-plan-gallery";
 
 export const metadata: Metadata = {
   title: "Opportunities",
-  description: "Explore the three remaining Stage One opportunities at BESA Park in Traralgon.",
+  description: "Explore the three remaining Stage One opportunities at BESA Park in Traralgon East.",
 };
 
 const configurations = [
@@ -40,7 +40,7 @@ export default function OpportunitiesPage() {
           <div><strong>3</strong><span>remaining</span></div>
           <div><strong>2</strong><span>already secured</span></div>
           <div><strong>5</strong><span>original release</span></div>
-          <div><strong>Traralgon</strong><span>Stirloch Circuit</span></div>
+          <div><strong>Traralgon East</strong><span>16 Stirloch Circuit</span></div>
         </section>
 
         <section className="units-section section-pad" id="configurations">

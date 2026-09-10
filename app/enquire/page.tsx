@@ -30,7 +30,7 @@ export default function EnquirePage() {
           copy="Two of the original five opportunities have already been secured. Tell us what you need and start the conversation while three remain."
           image="/besa-assets/warehouse-interior.png"
           imageAlt="BESA Park business space concept"
-          label="Traralgon · Victoria"
+          label="Traralgon East · Victoria"
         />
 
         <section className="enquire-section section-pad">
