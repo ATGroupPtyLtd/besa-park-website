@@ -2,8 +2,38 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "besa-park",
   "compatibility_date": "2026-08-31",
+  "main": "./worker/index.ts",
   "workers_dev": false,
   "assets": {
-    "directory": "./out"
-  }
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    // Replace both addresses before the first production deployment.
+    "ENQUIRY_FROM_ADDRESS": "website@besapark.com.au",
+    "ENQUIRY_TO_ADDRESS": "besaparkenquire@gmail.com",
+    "ENVIRONMENT": "production"
+  },
+  "send_email": [
+    {
+      "name": "ENQUIRY_EMAIL",
+      // These restrictions prevent the Worker from becoming an email relay.
+      "destination_address": "besaparkenquire@gmail.com",
+      "allowed_sender_addresses": ["website@besapark.com.au"]
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "ENQUIRY_RATE_LIMITER",
+      "namespace_id": "4170001",
+      "simple": { "limit": 5, "period": 60 }
+    },
+    {
+      "name": "ENQUIRY_GLOBAL_LIMITER",
+      "namespace_id": "4170002",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ]
 }

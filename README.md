@@ -1,23 +1,21 @@
-# BESA Park — Static Website Source
+# BESA Park — website source
 
-This is the editable source for the BESA Park website. It exports to ordinary static HTML, CSS, JavaScript and image files, so it can be hosted cheaply on Netlify or any standard static web host.
+This is the editable BESA Park website. It exports the frontend as static files and uses a small Cloudflare Worker for the protected enquiry endpoint.
 
-## Edit and preview
+## Local website preview
 
 1. Install Node.js 22 or newer.
-2. Open this folder in a terminal.
-3. Run `npm install`.
-4. Run `npm run dev`.
-5. Open the local address shown in the terminal.
+2. Run `npm install`.
+3. Run `npm run dev` and open the local address shown.
 
-The page content is in `app/`, shared sections are in `components/`, and the property images are in `public/besa-assets/`.
+To preview the full Cloudflare build, including a simulated email submission:
 
-## Create a fresh upload package
+1. Copy `.env.example` to `.env.local`.
+2. Copy `.dev.vars.example` to `.dev.vars`.
+3. Run `npm run preview` and open the Wrangler address shown.
 
-1. Run `npm run build`.
-2. The finished static website will appear in the `out/` folder.
-3. Upload the **contents** of `out/` to Netlify or another static host.
+The Cloudflare test keys work only for development. Local email delivery is simulated: Wrangler logs the message and saves its HTML and text without sending a real email.
 
-## Important note about the enquiry form
+## Enquiry security
 
-The form is currently a visual enquiry form only. It does not send submissions until it is connected to an email or form service.
+The form includes matching browser and server validation, current international phone metadata, Cloudflare Turnstile server verification, per-visitor and global rate limits, exact same-origin enforcement, a bot honeypot, strict request/content limits, HTML escaping, fixed sender/recipient bindings, safe reply-to handling, generic public errors, no user-data logging, and restrictive browser security headers. Turnstile tokens are checked for their expected action and hostname and are single-use.
